@@ -29,4 +29,26 @@ The system follows a microservices architecture with the following components:
 - JavaScript
 
 ## Project Structure
+payment-microservices-system        ← GitHub repository (ROOT)
+├── payment-ui
+└── payment-microservices-system    ← BACKEND PARENT FOLDER
+    ├── api-gateway
+    ├── discovery-server
+    ├── payment-service
+    └── wallet-service
 
+
+## How to Run Locally
+
+1. Start **Discovery Server**
+2. Start **API Gateway**
+3. Start **Payment Service**
+4. Start **Wallet Service**
+5. Run **payment-ui** using `npm start`
+
+## Key Highlights
+
+- Centralized routing using API Gateway
+- Service registration and discovery using Eureka
+- Independent and scalable microservices
+- Clean separation between frontend and backend
