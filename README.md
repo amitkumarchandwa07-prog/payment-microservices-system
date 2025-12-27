@@ -38,17 +38,46 @@ payment-microservices-system        ← GitHub repository (ROOT)
     └── wallet-service
 
 
-## How to Run Locally
+## How to Run Locally (Correct Order)
 
-1. Start **Discovery Server**
-2. Start **API Gateway**
-3. Start **Payment Service**
-4. Start **Wallet Service**
-5. Run **payment-ui** using `npm start`
+> ⚠️ **Important:** Services must be started in the correct order.
+
+### 1️⃣ Discovery Server
+Start the Eureka Discovery Server first.
+
+- URL:  http://localhost:8761/
+  
+---
+
+### 2️⃣ Wallet Service
+Start the Wallet Service after Eureka is up.
+
+- Sample API:  http://localhost:8083/wallet/balance/U2
+
+---
+
+### 3️⃣ Payment Service
+Start the Payment Service (registers with Eureka).
+
+---
+
+### 4️⃣ API Gateway
+Start the API Gateway (routes requests to backend services).
+
+---
+
+### 5️⃣ Payment UI (Frontend)
+Run the React UI.
+
+using 
+ - npm install
+ - npm start
+
+UI URL: http://localhost:3000
 
 ## Key Highlights
 
 - Centralized routing using API Gateway
 - Service registration and discovery using Eureka
-- Independent and scalable microservices
+- Independent, loosely coupled microservices
 - Clean separation between frontend and backend
