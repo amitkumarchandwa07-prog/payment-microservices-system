@@ -29,13 +29,18 @@ The system follows a microservices architecture with the following components:
 - JavaScript
 
 ## Project Structure
-payment-microservices-system ← GitHub repository (ROOT)
+
+```
+payment-microservices-system
 ├── payment-ui
-└── payment-microservices-system ← BACKEND PARENT FOLDER
+└── payment-microservices-system
     ├── api-gateway
     ├── discovery-server
     ├── payment-service
     └── wallet-service
+```
+
+---
 
 
 ## How to Run Locally (Correct Order)
